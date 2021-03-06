@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.topbar {
+    color: white;
+    height: 5em;
+}
+
+.content {
+    height: 10rem;
+    border: 0.2px solid lightskyblue;
+    border-radius: 2rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.image {
+    height:20rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+}
+
+.main-sec {
+    font-style: italic;
+}
+
+.pos {
+    padding-top: 5rem;
+}
+
+.error {
+    margin-top: 2rem;
+}
+
+.error h1 {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+}
+
+.btn-pos {
+    margin-left: 7rem;
+    padding-left: 2rem;
+}
+
+.rmb {
+    margin-right: 2.1rem;
+}
+
+.sidenav {
+    height: 35rem;
+}
+
+.dsboard {
+    margin-top:1rem;
+    border:0.1px black;
+    border-radius: 1.5rem;
+    height:auto;
+    background-color: #e6e6d8
+}
+
+.ths {
+    padding-right:10rem;
+}
+
+.footer-margin {
+    height:100px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 2rem;
+  margin-bottom: 20px;
+}

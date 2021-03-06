@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+    Pay Loan
+{% endblock title %}
+{% block body %}
+<div class="d-flex align-items-center justify-content-center">
+    <h2>Pay loan of ${{total1}}</h2>
+    <div class="ml-5">
+    <form action="{{url_for('checkout', id=loan.id)}}" method="POST">
+        <script
+            src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="pk_test_51IMTEZJcOeZJoBfmskaJmXhnlHnThNZd2lEHLMQaDI964LOkt6W7pmTQ8kV5MAxBlPhIx7AFCIHt4Yn0FJEVXLjx00kWHi6pTR"
+            data-description="loan payment"
+            data-amount="{{total2}}"
+            data-locale="auto">
+        </script>
+    </form>
+    </div>
+</div>
+
+
+{% endblock body %}

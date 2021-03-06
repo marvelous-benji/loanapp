@@ -1,0 +1,9 @@
+{% extends "admin/master.html" %}
+{% block head_css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    {{ super() }}
+{% endblock head_css %}
+
+{% block body %}
+<h4> You have been logged out</h4>
+{% endblock body%}

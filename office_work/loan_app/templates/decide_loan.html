@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+   <div class="container-fluid text-center ml-5">
+		<h1>Hello Admin</h1>
+		<h2>Click anyone of the buttons below to approve or turn down loan request</h2>
+		<div class="d-inline">
+            <a class="btn btn-primary" type="button" href="{{url_for('approve_loan', id=user_id)}}">
+                Approve
+            </a>
+            <a class="btn btn-danger" type="button" href="{{url_for('disapprove_loan', id=user_id)}}">
+                Turndown
+            </a>
+        </div>
+   </div>
+{% endblock body%}

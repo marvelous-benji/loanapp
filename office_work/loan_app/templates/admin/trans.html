@@ -1,0 +1,29 @@
+{% extends "admin/master.html" %}
+{% block head_css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    {{ super() }}
+{% endblock head_css %}
+{% block body %}
+{{ super() }}
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+    <!-- <div class="col-md-10 mx-auto" style="margin-top:4rem;">
+
+         <div class="dsboard">
+             <table class="table table-hover">
+               <thead>
+                 <tr>
+                   <th scope="col">Date of request</th>
+                   <th scope="col">Amount</th>
+                   <th scope="col">Loan interest</th>
+                   <th scope="col">Date of payment</th>
+                   <th scope="col">Status</th>
+                 </tr>
+               </thead>
+            </table>
+        </div>
+    </div> -->
+{% endblock body %}

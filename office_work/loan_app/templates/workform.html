@@ -1,0 +1,127 @@
+{% extends "layout.html" %} {%block title%} Sign Up {% endblock %} {%block body%}
+<div class="container mt-5">
+    <form method="POST" class="col-8" action="">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.occupation.label(class="form-control-label")}}
+            {% if form.occupation.errors %}
+                {{form.occupation(class="form-control is-invalid", placeholder="What job do you do")}}
+                <div class="invalid-feedback">
+                    {% for error in form.occupation.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.occupation(class="form-control", placeholder="What job do you do")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.phone_number.label(class="form-control-label")}}
+            {% if form.phone_number.errors %}
+                {{form.phone_number(class="form-control is-invalid", placeholder="in the format +234")}}
+                <div class="invalid-feedback">
+                    {% for error in form.phone_number.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.phone_number(class="form-control",placeholder="in the format +234")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.account_number.label(class="form-control-label")}}
+            {% if form.account_number.errors %}
+                {{form.account_number(class="form-control is-invalid", placeholder="enter account number")}}
+                <div class="invalid-feedback">
+                    {% for error in form.account_number.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.account_number(class="form-control", placeholder="enter account number")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.bvn.label(class="form-control-label")}}
+            {% if form.bvn.errors %}
+                {{form.bvn(class="form-control is-invalid", placeholder="enter BVN")}}
+                <div class="invalid-feedback">
+                    {% for error in form.bvn.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.bvn(class="form-control", placeholder="enter BVN")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.bank.label(class="form-control-label")}}
+            {% if form.bank.errors %}
+                {{form.bank(class="form-control is-invalid", placeholder="enter Bank name")}}
+                <div class="invalid-feedback">
+                    {% for error in form.bank.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.bank(class="form-control", placeholder="enter Bank name")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.address.label(class="form-control-label")}}
+            {% if form.address.errors %}
+                {{form.address(class="form-control is-invalid", placeholder="enter house address")}}
+                <div class="invalid-feedback">
+                    {% for error in form.address.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.address(class="form-control", placeholder="enter house address")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.next_of_kin.label(class="form-control-label")}}
+            {% if form.next_of_kin.errors %}
+                {{form.next_of_kin(class="form-control is-invalid", placeholder="enter next of kin name")}}
+                <div class="invalid-feedback">
+                    {% for error in form.next_of_kin.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.next_of_kin(class="form-control", placeholder="enter next of kin name")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.next_address.label(class="form-control-label")}}
+            {% if form.next_address.errors %}
+                {{form.next_address(class="form-control is-invalid", placeholder="enter next of kin address")}}
+                <div class="invalid-feedback">
+                    {% for error in form.next_address.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.next_address(class="form-control", placeholder="enter next of kin address")}}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{form.reasons.label(class="form-control-label")}}
+            {% if form.reasons.errors %}
+                {{form.reasons(class="form-control is-invalid",placeholder="why do your need a loan")}}
+                <div class="invalid-feedback">
+                    {% for error in form.reasons.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{form.reasons(class="form-control",placeholder="Why you need the loan")}}
+            {% endif %}
+        </div>
+        <div>
+            {{form.submit(class="btn btn-primary")}}
+        </div>
+    </form>
+</div>
+{%endblock body%}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="container mt-5">
+		<form method="POST" action="" class="col-8">
+			{{form.hidden_tag()}}
+            <div class="form-group">
+                {{form.email.label(for="mail")}} {% if form.email.errors %} {{form.email(class="form-control is-invalid", id="mail", placeholder="Email")}}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{error}}</span> {% endfor %}
+                </div>
+                {% else %} {{form.email(class="form-control", id="mail", placeholder="Email")}} {% endif %}
+            </div>
+			<div class="form-group">
+				{{form.submit(class="btn btn-outline-info")}}
+			</div>
+		</form>
+	</div>
+{% endblock body%}

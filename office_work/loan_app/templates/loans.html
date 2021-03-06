@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Account{% endblock title %}
+{% block body %}
+    <div class="col-md-10 mx-auto dsboard" style="margin-top:8rem;">
+         <h3 class="text-center">Request a loan today</h3>
+         <hr/>
+         <div style="margin-top:1rem;">
+             <table class="table table-hover">
+               <thead>
+                 <tr>
+                   <th scope="col">Loan amount</th>
+                   <th scope="col">Loan duration</th>
+                   <th scope="col">Loan rate</th>
+                   <th scope="col">Loan interest</th>
+                   <th scope="col">Repayment date</th>
+                   <th scope="col">Decision</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 {% for loan in loans%}
+                     <tr>
+                         <th scope="row">{{loan.amount}}</th>
+                         <td>{{loan.duration}} days</td>
+                         <td>{{loan.rate}}</td>
+                         <td>{{loan.interest}}</td>
+                         <td>{{loan.date_of_payment.strftime("%d-%m-%Y")}}</td>
+                         <td><a href="{{url_for('Get_loan', loan_id=loan.id)}}" class="btn btn-primary">Get loan</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+         </table>
+    </div>
+{% endblock body %}
